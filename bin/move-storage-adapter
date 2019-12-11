@@ -5,7 +5,10 @@ echo "Moving Storage Adapter"
 ADAPTER="ghost-storage-adapter-ipfs"
 SRC="./node_modules/$ADAPTER/"
 DEST="./content/adapters/storage/"
-SYMLINK="$DEST/$ADAPTER"
+SYMLINK="$DEST$ADAPTER"
 
+# Removes symbolic link from destination folder
 rm $SYMLINK
+
+# Moves storage adapter to content folder
 mv $SRC $DEST
