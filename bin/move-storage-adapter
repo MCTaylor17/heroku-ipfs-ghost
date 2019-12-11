@@ -4,10 +4,8 @@ echo "Moving Storage Adapter"
 
 ADAPTER="ghost-storage-adapter-ipfs"
 SRC="./node_modules/$ADAPTER/"
-DEST="./node_modules/ghost/core/server/adapters/storage/"
-SYMLINK="./content/adapters/storage/$ADAPTER"
+DEST="./content/adapters/storage/"
+SYMLINK="$DEST/$ADAPTER"
 
-mkdir -p $DEST
-# rm $SYMLINK
-mv $SRC "./content/adapters/storage/"
-# mv $SRC $DEST
+rm $SYMLINK
+mv $SRC $DEST
