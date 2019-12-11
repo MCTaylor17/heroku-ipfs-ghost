@@ -8,5 +8,6 @@ DEST="./node_modules/ghost/core/server/adapters/storage/"
 SYMLINK="./content/adapters/storage/$ADAPTER"
 
 mkdir -p $DEST
-mv $SRC $DEST
 rm $SYMLINK
+mv $SRC "./content/adapters/storage/"
+# mv $SRC $DEST
